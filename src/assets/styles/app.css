@@ -1,0 +1,21 @@
+body { @apply flex flex-1 min-w-screen min-h-screen max-w-screen overflow-x-hidden; }
+body > div { @apply flex flex-1;}
+
+.c-slide-left-enter-active,
+.c-slide-left-leave-active,
+.c-slide-right-enter-active,
+.c-slide-right-leave-active {
+  @apply fixed inset-0 transition-transform duration-200 ease-in-out;
+}
+
+.c-slide-left-enter-active { @apply z-10; }
+.c-slide-left-leave-active { @apply z-0; }
+
+.c-slide-left-enter-to { @apply transform translate-x-0; }
+.c-slide-left-enter-from { @apply transform translate-x-full; }
+
+.c-slide-right-enter-active { @apply z-0; }
+.c-slide-right-leave-active { @apply z-10; }
+
+.c-slide-right-leave-to { @apply transform translate-x-full; }
+.c-slide-right-leave-from { @apply transform translate-x-0; }
